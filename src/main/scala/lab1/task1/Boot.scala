@@ -32,7 +32,7 @@ object Boot extends App {
   println(invictus.isDirectedBy(nolan)) // should be false
 
   println(invictus.isDirectedBy(eastwood))
-  highPlainsDrifter.clone()
+ // highPlainsDrifter.clone()
   val f1 = highPlainsDrifter.copy(name1 ="L'hommedeshautesplaines") // returns Film("L'hommedeshautesplaines",1973,7.7,/*etc*/)
   val f2 = thomasCrownAffair.copy(yearOfRelease1 = 1968,director1 = new Director("Norman","Jewison", 1926)) // returnsFilm("TheThomasCrownAffair",1926,/*etc*/)
   val f3 = inception.copy().copy().copy()
