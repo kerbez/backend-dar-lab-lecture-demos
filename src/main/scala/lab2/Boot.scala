@@ -30,6 +30,8 @@ object Boot extends App{
     seq.filter(x => x.films.size > numberOfFilms)
   }
 
+  task1(directors, 4).foreach(println(_))
+
   def task2(seq: Seq[Director], year: Int): Seq[Director] ={
     println("task2")
 //    seq.filter(p=> p.yearOfBirth < year).foreach(println(_))
@@ -37,14 +39,15 @@ object Boot extends App{
     seq.filter(p=> p.yearOfBirth < year)
   }
 
+  task2(directors, 1990).foreach(println(_))
+
   def task3(seq: Seq[Director], year: Int, numberOfFilms: Int)(nof : (Seq[Director], Int) => Seq[Director])(y : (Seq[Director], Int) => Seq[Director]): Seq[Director] ={
     println("task3")
-    nof(seq, numberOfFilms).intersect(y(seq, year)).foreach(println(_))
     nof(seq, numberOfFilms).intersect(y(seq, year))
   }
 //task1(directors, 4)
   //task2(directors, 1990)
-  task3(directors, 1990, 4)(task1)(task2)
+  task3(directors, 1990, 4)(task1)(task2).foreach(println(_))
 
 
   def task4(seq: Seq[Director], ascending: Int = 1): Seq[Director] = ascending match {
@@ -60,18 +63,16 @@ object Boot extends App{
 
 
   println("---------task5---------")
-  val t5 = for {
-    i <- nolan.films
-  } yield i.name
-  println(t5)
+  nolan.films.foreach(x=>print(s"${x.name}, "))
 
   println()
   println("---------task6---------")
-  println(directors.flatMap(x => x.films).map(y => y.name))
+  println(directors.flatMap(x => x.films).foreach(x => print(s"${x.name}, ")))
 
   println()
   println("---------task7---------")
-  println(mcTiernan.films.sortWith(_.yearOfRelease < _.yearOfRelease))
+  mcTiernan.films.sortWith(_.yearOfRelease < _.yearOfRelease).foreach(x=> print(s"${x.name} "))
+  println()
   println(mcTiernan.films.sortWith(_.yearOfRelease < _.yearOfRelease)(0).name)
 
 
