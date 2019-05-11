@@ -51,7 +51,7 @@ object Boot extends App{
   def calculator(op1: String, op: String, op2: String): Unit ={
     if((readInt(op1) != None) && (readInt(op2) != None)){
       if(readStr(op) != None){
-        println(res(readInt(op1).get, readStr(op).get, readInt(op2).get))
+        println(res(readhow to insInt(op1).get, readStr(op).get, readInt(op2).get))
       }
     }
   }

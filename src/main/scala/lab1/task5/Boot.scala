@@ -2,12 +2,12 @@ package lab1.task5
 
 object Boot extends App{
 //  Task5
-//    val Cat1 = new Cat("Oswald", "Black", "Milk");
-//    val Cat2 = new Cat("Henderson", "Ginger", "Chips");
-//    val Cat3 = new Cat("Quentin", "Tabby and white", "Curry");
-//    println(Cat1)
-//    println(Cat2)
-//    println(Cat3)
+    val Cat1 = Cat("Oswald", "Black", "Milk")
+    val Cat2 = new Cat("Henderson", "Ginger", "Chips");
+    val Cat3 = new Cat("Quentin", "Tabby and white", "Curry");
+    println(Cat1)
+    println(Cat2)
+    println(Cat3)
 
 
 //  Task6

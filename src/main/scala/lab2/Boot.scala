@@ -41,6 +41,8 @@ object Boot extends App{
 
   task2(directors, 1990).foreach(println(_))
 
+  def task3Alt(y: Int, nf: Int) = task2(task1(directors, nf), y)
+
   def task3(seq: Seq[Director], year: Int, numberOfFilms: Int)(nof : (Seq[Director], Int) => Seq[Director])(y : (Seq[Director], Int) => Seq[Director]): Seq[Director] ={
     println("task3")
     nof(seq, numberOfFilms).intersect(y(seq, year))

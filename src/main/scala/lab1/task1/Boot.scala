@@ -1,13 +1,16 @@
 package lab1.task1
 
 object Boot extends App {
-//  val Cat1 = new Cat("Oswald", "Black", "Milk");
-//  val Cat2 = new Cat("Henderson", "Ginger", "Chips");
-//  val Cat3 = new Cat("Quentin", "Tabby and white", "Curry");
-//  println(Cat1)
-//  println(Cat2)
-//  println(Cat3)
+  println("--------Task1------------")
+  val Cat1 = new Cat("Oswald", "Black", "Milk");
+  val Cat2 = new Cat("Henderson", "Ginger", "Chips");
+  val Cat3 = new Cat("Quentin", "Tabby and white", "Curry");
+  println(Cat1)
+  println(Cat2)
+  println(Cat3)
 
+  println()
+  println("-----------Task2-----------")
 //  Task2
 //
   val eastwood = new Director("Clint","Eastwood", 1930)
@@ -44,8 +47,9 @@ object Boot extends App {
 
 
 //  Task3
-//
-//  println(new Counter(10).inc.dec.inc.inc.count)
+   println()
+
+  println(new Counter(10).inc.dec.inc.inc.count)
 
 //  println(new Counter(10).inc(2).dec(3).inc().inc().count)
 
